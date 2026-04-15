@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PUP Maragondon – Digital Library</title>
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- PAGE LOADER -->
+<div class="page-transition" id="page-transition">
+  <div class="loader-icon"><i class="fa-solid fa-book-open"></i></div>
+  <p class="loader-text">Loading...</p>
+</div>
+
+<!-- MAIN HEADER -->
+<header id="main-header">
+  <div class="header-container">
+    <a href="index.html" class="logo no-transition">
+      <img src="assets/images/logo.png" alt="PUP Logo" class="logo-img">
+      <div class="logo-text-wrap">
+        <span>PUP Maragondon Library</span>
+        <span class="logo-sub">Polytechnic University of the Philippines</span>
+      </div>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html" class="">About</a></li>
+        <li class="has-dropdown">
+          <a href="services.html" class="">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="services.html#circulation"><i class="fa-solid fa-rotate"></i> Circulation</a></li>
+            <li><a href="services.html#reserve"><i class="fa-solid fa-bookmark"></i> Reserve</a></li>
+            <li><a href="services.html#reference"><i class="fa-solid fa-magnifying-glass"></i> Reference</a></li>
+            <li><a href="services.html#filipiniana"><i class="fa-solid fa-flag"></i> Filipiniana</a></li>
+            <li><a href="services.html#periodical"><i class="fa-solid fa-newspaper"></i> Periodical</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="resources.html" class="">Resources</a>
+          <ul class="dropdown-menu">
+            <li><a href="resources.html"><i class="fa-solid fa-database"></i> Online Resources</a></li>
+            <li><a href="holdings.html"><i class="fa-solid fa-books"></i> Library Holdings</a></li>
+          </ul>
+        </li>
+        <li><a href="guidelines.html" class="">Guidelines</a></li>
+        <li><a href="programs.html" class="">Programs</a></li>
+        <li class="has-dropdown">
+          <a href="#" class="">More</a>
+          <ul class="dropdown-menu">
+            <li><a href="linkages.html"><i class="fa-solid fa-link"></i> Linkages</a></li>
+            <li><a href="survey.html"><i class="fa-solid fa-clipboard-list"></i> Library Survey</a></li>
+            <li><a href="administration.html"><i class="fa-solid fa-users"></i> Administration</a></li>
+          </ul>
+        </li>
+      </ul>
+      <button class="hamburger" aria-label="Open Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-drawer" id="mobile-drawer">
+  <button class="drawer-close" aria-label="Close Menu"><i class="fa-solid fa-xmark"></i></button>
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,0.07);">
+    <img src="assets/images/logo.png" alt="PUP Logo" style="height:34px;width:auto;">
+    <div>
+      <div style="color:#fff;font-family:'Playfair Display',serif;font-size:0.92rem;font-weight:600;line-height:1.2;">PUP Maragondon</div>
+      <div style="color:rgba(255,255,255,0.42);font-size:0.62rem;letter-spacing:1px;text-transform:uppercase;">Digital Library</div>
+    </div>
+  </div>
+  <nav class="drawer-nav">
+    <a href="index.html" class="active"><span>Home</span></a>
+    <a href="about.html" class=""><span>About</span></a>
+    <a href="services.html" class=""><span>Services</span></a>
+    <a href="resources.html" class=""><span>Online Resources</span></a>
+    <a href="holdings.html" class=""><span>Library Holdings</span></a>
+    <a href="guidelines.html" class=""><span>Guidelines</span></a>
+    <a href="programs.html" class=""><span>Programs &amp; Events</span></a>
+    <a href="linkages.html" class=""><span>Linkages</span></a>
+    <a href="survey.html" class=""><span>Library Survey</span></a>
+    <a href="administration.html" class=""><span>Administration</span></a>
+  </nav>
+</div>
+<div class="drawer-overlay" id="drawer-overlay"></div>
+
+
+<!-- ══════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-bg-text">Library</div>
+
+  <div class="container hero-content">
+    <div class="hero-eyebrow stagger-1">
+      <span>PUP Maragondon Campus</span>
+    </div>
+    <h1 class="stagger-2">Discover, <em>Learn,</em><br>and Innovate.</h1>
+    <!-- CONTENT UPDATED FROM PDF PAGE 1 -->
+    <p class="hero-sub stagger-3">Your gateway to PUP Maragondon's digital resources, theses, Filipiniana, and multimedia collections — available anytime, anywhere.</p>
+
+    <div class="hero-search stagger-4">
+      <form action="#" method="GET" style="display:contents;">
+        <select name="category" class="search-cat">
+          <option value="all">All</option>
+          <option value="books">Books</option>
+          <option value="theses">Theses</option>
+          <option value="videos">Videos</option>
+          <option value="filipiniana">Filipiniana</option>
+        </select>
+        <input type="text" id="search-input" name="query" placeholder="" required>
+        <button type="submit" class="btn-search-hero"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+    </div>
+
+    <div class="hero-stats stagger-4">
+      <!-- STATS VALUES ARE ILLUSTRATIVE AS EXACT NUMBERS AREN'T IN PDF -->
+      <div class="hero-stat">
+        <span class="num">8,500+</span>
+        <span class="lbl">Books</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num">3,500+</span>
+        <span class="lbl">Theses</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num">10+</span>
+        <span class="lbl">Databases</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num">2023</span>
+        <span class="lbl">Updated</span>
+      </div>
+    </div>
+  </div>
+
+  <!--<div class="scroll-down">
+    <span>Scroll</span>
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>-->
+</section>
+
+<!-- ══════════════════════════════════════════════
+     QUICK ACCESS CARDS
+════════════════════════════════════════════════ -->
+<section class="quick-access reveal">
+  <div class="container">
+    <div class="quick-grid">
+      <div class="q-card" onclick="location.href='holdings.html'">
+        <div class="q-card-icon"><i class="fa-solid fa-book"></i></div>
+        <h3>Digital Library</h3>
+        <p>Access e-books, modules, and PDF resources anytime.</p>
+      </div>
+      <div class="q-card" onclick="location.href='holdings.html#theses'">
+        <div class="q-card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <h3>Theses & Research</h3>
+        <p>Explore student dissertations and research archives.</p>
+      </div>
+      <div class="q-card" onclick="location.href='resources.html'">
+        <div class="q-card-icon"><i class="fa-solid fa-database"></i></div>
+        <h3>Online Databases</h3>
+        <p>Access Emerald, Gale, ProQuest, and more.</p>
+      </div>
+      <div class="q-card" onclick="location.href='services.html'">
+        <div class="q-card-icon"><i class="fa-solid fa-circle-question"></i></div>
+        <h3>Library Services</h3>
+        <p>Circulation, reference, reserve, and Filipiniana.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     STATS COUNTER SECTION
+════════════════════════════════════════════════ -->
+<section class="stats-section reveal">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-num" data-target="8500" data-suffix="+">0</span>
+        <span class="stat-label">Book Titles</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="3500" data-suffix="+">0</span>
+        <span class="stat-label">Theses & Dissertations</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="10" data-suffix="">0</span>
+        <span class="stat-label">Online Databases</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="1200" data-suffix="+">0</span>
+        <span class="stat-label">Active Borrowers</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     AVP / LIBRARY TOUR SECTION
+════════════════════════════════════════════════ -->
+<section class="avp-section">
+  <div class="container">
+    <div class="avp-inner">
+      <div class="avp-text reveal-left">
+        <span class="section-label">Virtual Tour</span>
+        <h2>Explore the PUP Maragondon Library</h2>
+        <p>Discover our wide range of digital collections, collaborative spaces, and advanced learning tools through our audio-visual presentation. See what makes our library one of the finest academic libraries in the region.</p>
+        <ul class="avp-features">
+          <li><i class="fa-solid fa-circle-check"></i> Modern Interactive Learning Spaces</li>
+          <li><i class="fa-solid fa-circle-check"></i> Thousands of Open-Access E-Books</li>
+          <li><i class="fa-solid fa-circle-check"></i> Dedicated Multimedia Viewing Rooms</li>
+          <li><i class="fa-solid fa-circle-check"></i> Filipiniana & Special Collections</li>
+        </ul>
+        <button class="btn-gold" id="btn-watch-avp"><i class="fa-solid fa-play"></i> Watch Full Tour</button>
+      </div>
+      <div class="avp-visual reveal-right">
+        <div class="avp-thumbnail" id="play-avp-thumb">
+          <img src="https://images.unsplash.com/photo-1568667256549-094345857637?auto=format&fit=crop&w=800&q=80" alt="Library Tour Thumbnail">
+          <div class="avp-play-overlay">
+            <div class="play-ring"><i class="fa-solid fa-play"></i></div>
+          </div>
+        </div>
+        <div class="avp-deco"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO MODAL -->
+<div class="video-modal" id="video-modal">
+  <div class="modal-content">
+    <span class="close-modal" id="close-modal"><i class="fa-solid fa-xmark"></i></span>
+    <div class="iframe-container">
+      <iframe id="avp-iframe" src="" title="PUP Maragondon Library Tour" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     NEW ARRIVALS
+════════════════════════════════════════════════ -->
+<section class="new-arrivals reveal">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Fresh Resources</span>
+      <h2 class="section-title">Recently <span>Added</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-sub" style="margin:16px auto 0;">The latest books, theses, and multimedia added to our growing collection.</p>
+    </div>
+    <div class="arrivals-grid" id="arrivals-container">
+            <!-- Static arrival cards -->
+      <div class="arrival-card">
+        <div class="arrival-img"><div style="background:var(--parchment);height:160px;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;"><i class="fa-solid fa-book" style="font-size:2.5rem;color:var(--maroon);opacity:0.3;"></i></div></div>
+        <div class="arrival-body">
+          <p style="font-size:0.85rem;font-weight:600;color:var(--ink);">New Arrival Title 1</p>
+          <span style="font-size:0.78rem;color:var(--ink-light);">Author / Subject Area</span>
+          <a href="holdings.html" class="btn-outline" style="margin-top:14px;font-size:0.8rem;padding:8px 18px;display:inline-flex;">View Holdings</a>
+        </div>
+      </div>
+      <div class="arrival-card">
+        <div class="arrival-img"><div style="background:var(--parchment);height:160px;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;"><i class="fa-solid fa-graduation-cap" style="font-size:2.5rem;color:var(--maroon);opacity:0.3;"></i></div></div>
+        <div class="arrival-body">
+          <p style="font-size:0.85rem;font-weight:600;color:var(--ink);">New Arrival Title 2</p>
+          <span style="font-size:0.78rem;color:var(--ink-light);">Author / Subject Area</span>
+          <a href="holdings.html" class="btn-outline" style="margin-top:14px;font-size:0.8rem;padding:8px 18px;display:inline-flex;">View Holdings</a>
+        </div>
+      </div>
+      <div class="arrival-card">
+        <div class="arrival-img"><div style="background:var(--parchment);height:160px;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;"><i class="fa-solid fa-database" style="font-size:2.5rem;color:var(--maroon);opacity:0.3;"></i></div></div>
+        <div class="arrival-body">
+          <p style="font-size:0.85rem;font-weight:600;color:var(--ink);">New Arrival Title 3</p>
+          <span style="font-size:0.78rem;color:var(--ink-light);">Author / Subject Area</span>
+          <a href="holdings.html" class="btn-outline" style="margin-top:14px;font-size:0.8rem;padding:8px 18px;display:inline-flex;">View Holdings</a>
+        </div>
+      </div>
+      <div class="arrival-card">
+        <div class="arrival-img"><div style="background:var(--parchment);height:160px;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;"><i class="fa-solid fa-flag" style="font-size:2.5rem;color:var(--maroon);opacity:0.3;"></i></div></div>
+        <div class="arrival-body">
+          <p style="font-size:0.85rem;font-weight:600;color:var(--ink);">New Arrival Title 4</p>
+          <span style="font-size:0.78rem;color:var(--ink-light);">Author / Subject Area</span>
+          <a href="holdings.html" class="btn-outline" style="margin-top:14px;font-size:0.8rem;padding:8px 18px;display:inline-flex;">View Holdings</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ══════════════════════════════════════════════
+     TUTORIAL CTA
+════════════════════════════════════════════════ -->
+<section class="tutorial-cta reveal">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="cta-text">
+        <h2>Need help navigating the portal?</h2>
+        <p>Check out our step-by-step guides on how to access files, view educational videos, and maximize the PUP Maragondon digital library resources.</p>
+        <div class="cta-buttons">
+          <a href="programs.html" class="btn-gold"><span>View Programs</span> <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="guidelines.html" class="btn-outline" style="border-color:rgba(255,255,255,0.4);color:#fff;">Read Guidelines</a>
+        </div>
+      </div>
+      <div class="cta-icons">
+        <div class="cta-icon-ring"><i class="fa-solid fa-laptop"></i></div>
+        <div class="cta-icon-ring"><i class="fa-solid fa-circle-play"></i></div>
+        <div class="cta-icon-ring"><i class="fa-solid fa-book-open"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     FEATURED RESOURCE OF THE WEEK
+════════════════════════════════════════════════ -->
+<section style="padding:100px 0;background:var(--white);">
+  <div class="container reveal">
+    <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:70px;align-items:center;">
+      <div>
+        <span class="section-label">Featured This Week</span>
+        <h2 class="section-title" style="text-align:left;">Resource <span>Spotlight</span></h2>
+        <div class="section-divider left"></div>
+        <p style="margin-top:20px;color:var(--ink-light);line-height:1.9;font-size:0.95rem;">
+          [Placeholder: This week's featured resource title and description. This could be a newly acquired book, a highlighted thesis, or a key online database worth exploring. Librarians can update this section regularly through the CMS panel.]
+        </p>
+        <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="#" class="btn-primary"><span>View Resource</span> <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="holdings.html" class="btn-outline">Browse All Holdings</a>
+        </div>
+      </div>
+      <div style="background:var(--parchment);border-radius:var(--radius-lg);aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:var(--maroon);border:2px dashed var(--border);">
+        <i class="fa-solid fa-book-open" style="font-size:3rem;opacity:0.35;"></i>
+        <span style="font-size:0.85rem;color:var(--ink-light);">Featured resource image placeholder</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col brand-col">
+        <div class="footer-logo">
+          <i class="fa-solid fa-book-open"></i>
+          <h3>PUP Maragondon Library</h3>
+        </div>
+        <p>Your gateway to academic excellence. Providing reliable digital resources, research archives, and multimedia for the Iskolar ng Bayan since 1987.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About the Library</a></li>
+          <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Library Services</a></li>
+          <li><a href="resources.html"><i class="fa-solid fa-angle-right"></i> Online Resources</a></li>
+          <li><a href="holdings.html"><i class="fa-solid fa-angle-right"></i> Library Holdings</a></li>
+          <li><a href="guidelines.html"><i class="fa-solid fa-angle-right"></i> Guidelines</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="programs.html"><i class="fa-solid fa-angle-right"></i> Library Orientation</a></li>
+          <li><a href="programs.html"><i class="fa-solid fa-angle-right"></i> Book Week Celebration</a></li>
+          <li><a href="linkages.html"><i class="fa-solid fa-angle-right"></i> Linkages</a></li>
+          <li><a href="survey.html"><i class="fa-solid fa-angle-right"></i> Library Survey</a></li>
+          <li><a href="administration.html"><i class="fa-solid fa-angle-right"></i> Administration</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> <span>Maragondon, Cavite, Philippines</span></li>
+          <li><i class="fa-solid fa-clock"></i> <span>Mon – Fri: 8:00 AM – 5:00 PM</span></li>
+          <li><i class="fa-solid fa-envelope"></i> <span>library.maragondon@pup.edu.ph</span></li>
+          <li><i class="fa-solid fa-phone"></i> <span>(046) 412 3312</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+      <p>&copy; 2025 Polytechnic University of the Philippines – Maragondon. All rights reserved.</p>
+      <p><a href="survey.html">Library Survey</a> &nbsp;·&nbsp; <a href="administration.html">Administration</a></p>
+    </div>
+  </div>
+</footer>
+<button id="back-to-top" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="script.js"></script>
+</body>
+</html>

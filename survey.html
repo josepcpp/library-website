@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Survey – PUP Maragondon Digital Library</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="page-transition" id="page-transition">
+      <div class="loader-icon"><i class="fa-solid fa-book-open"></i></div>
+      <p class="loader-text">Loading...</p>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header id="main-header">
+      <div class="header-container">
+        <a href="index.html" class="logo no-transition">
+          <img src="assets/images/logo.png" alt="PUP Logo" class="logo-img" />
+          <div class="logo-text-wrap">
+            <span>PUP Maragondon Library</span>
+            <span class="logo-sub"
+              >Polytechnic University of the Philippines</span
+            >
+          </div>
+        </a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html" class="">Home</a></li>
+            <li><a href="about.html" class="">About</a></li>
+            <li class="has-dropdown">
+              <a href="services.html" class="">Services</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="services.html#circulation"
+                    ><i class="fa-solid fa-rotate"></i> Circulation</a
+                  >
+                </li>
+                <li>
+                  <a href="services.html#reserve"
+                    ><i class="fa-solid fa-bookmark"></i> Reserve</a
+                  >
+                </li>
+                <li>
+                  <a href="services.html#reference"
+                    ><i class="fa-solid fa-magnifying-glass"></i> Reference</a
+                  >
+                </li>
+                <li>
+                  <a href="services.html#filipiniana"
+                    ><i class="fa-solid fa-flag"></i> Filipiniana</a
+                  >
+                </li>
+                <li>
+                  <a href="services.html#periodical"
+                    ><i class="fa-solid fa-newspaper"></i> Periodical</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="resources.html" class="">Resources</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="resources.html"
+                    ><i class="fa-solid fa-database"></i> Online Resources</a
+                  >
+                </li>
+                <li>
+                  <a href="holdings.html"
+                    ><i class="fa-solid fa-books"></i> Library Holdings</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="guidelines.html" class="">Guidelines</a></li>
+            <li><a href="programs.html" class="">Programs</a></li>
+            <li class="has-dropdown">
+              <a href="#" class="active">More</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="linkages.html"
+                    ><i class="fa-solid fa-link"></i> Linkages</a
+                  >
+                </li>
+                <li>
+                  <a href="survey.html"
+                    ><i class="fa-solid fa-clipboard-list"></i> Library
+                    Survey</a
+                  >
+                </li>
+                <li>
+                  <a href="administration.html"
+                    ><i class="fa-solid fa-users"></i> Administration</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <button class="hamburger" aria-label="Open Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MOBILE DRAWER -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <button class="drawer-close" aria-label="Close Menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 28px;
+          padding-bottom: 20px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        "
+      >
+        <img
+          src="assets/images/logo.png"
+          alt="PUP Logo"
+          style="height: 34px; width: auto"
+        />
+        <div>
+          <div
+            style="
+              color: #fff;
+              font-family: &quot;Playfair Display&quot;, serif;
+              font-size: 0.92rem;
+              font-weight: 600;
+              line-height: 1.2;
+            "
+          >
+            PUP Maragondon
+          </div>
+          <div
+            style="
+              color: rgba(255, 255, 255, 0.42);
+              font-size: 0.62rem;
+              letter-spacing: 1px;
+              text-transform: uppercase;
+            "
+          >
+            Digital Library
+          </div>
+        </div>
+      </div>
+      <nav class="drawer-nav">
+        <a href="index.html" class=""><span>Home</span></a>
+        <a href="about.html" class=""><span>About</span></a>
+        <a href="services.html" class=""><span>Services</span></a>
+        <a href="resources.html" class=""><span>Online Resources</span></a>
+        <a href="holdings.html" class=""><span>Library Holdings</span></a>
+        <a href="guidelines.html" class=""><span>Guidelines</span></a>
+        <a href="programs.html" class=""><span>Programs &amp; Events</span></a>
+        <a href="linkages.html" class=""><span>Linkages</span></a>
+        <a href="survey.html" class="active"><span>Library Survey</span></a>
+        <a href="administration.html" class=""><span>Administration</span></a>
+      </nav>
+    </div>
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+
+    <section class="inner-hero" style="min-height: 45vh">
+      <div class="hero-overlay"></div>
+      <div class="container inner-hero-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right"></i>
+          <span>Library Survey</span>
+        </div>
+        <h1>Library Survey</h1>
+        <p>
+          Your feedback helps us improve our services for the entire PUP
+          Maragondon community.
+        </p>
+      </div>
+    </section>
+
+    <section style="background: var(--parchment); padding: 100px 0">
+      <div class="container">
+        <div
+          style="max-width: 760px; margin: 0 auto; text-align: center"
+          class="reveal"
+        >
+          <span class="section-label">We Value Your Opinion</span>
+          <h2 class="section-title" style="margin-bottom: 14px">
+            Help Us <span>Serve Better</span>
+          </h2>
+          <div class="section-divider"></div>
+          <!-- CONTENT UPDATED FROM PDF PAGE 51 -->
+          <p
+            style="
+              color: var(--ink-light);
+              font-size: 0.95rem;
+              line-height: 1.9;
+              margin: 20px auto 40px;
+              max-width: 560px;
+            "
+          >
+            The library is committed to the continuous development and
+            improvement of our services. Your input is crucial in helping us
+            meet the changing needs of the academic community.
+          </p>
+
+          <!-- Survey embed or link card -->
+          <div
+            style="
+              background: var(--white);
+              border-radius: var(--radius-lg);
+              padding: 60px 40px;
+              box-shadow: var(--shadow-card);
+              border: 1px solid var(--border);
+            "
+          >
+            <div
+              style="
+                width: 80px;
+                height: 80px;
+                background: rgba(123, 29, 29, 0.07);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 24px;
+                font-size: 2rem;
+                color: var(--maroon);
+              "
+            >
+              <i class="fa-solid fa-clipboard-list"></i>
+            </div>
+            <h3 style="font-size: 1.8rem; margin-bottom: 14px">
+              Library Satisfaction Survey
+            </h3>
+            <p
+              style="
+                color: var(--ink-light);
+                font-size: 0.92rem;
+                line-height: 1.8;
+                margin-bottom: 8px;
+              "
+            >
+              <i
+                class="fa-regular fa-clock"
+                style="color: var(--maroon); margin-right: 8px"
+              ></i>
+              Estimated time: 5–10 minutes
+            </p>
+            <p
+              style="
+                color: var(--ink-light);
+                font-size: 0.92rem;
+                line-height: 1.8;
+                margin-bottom: 32px;
+              "
+            >
+              <i
+                class="fa-solid fa-shield-halved"
+                style="color: var(--maroon); margin-right: 8px"
+              ></i>
+              Your responses are confidential and anonymous
+            </p>
+
+            <!-- Replace href with your actual Google Form or survey link -->
+            <a
+              href="https://forms.gle/iJicqykCupxRXPy57"
+              target="_blank"
+              class="btn-primary"
+              style="display: inline-flex; font-size: 1rem; padding: 15px 40px"
+            >
+              <span>Take the Survey</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <p
+              style="
+                margin-top: 20px;
+                font-size: 0.8rem;
+                color: var(--ink-light);
+              "
+            >
+              Opens in a new tab · Powered by Google Forms
+            </p>
+          </div>
+
+          <!-- What we ask -->
+          <div style="margin-top: 60px; text-align: left">
+            <h4
+              style="
+                font-family: &quot;Cormorant Garamond&quot;, serif;
+                font-size: 1.6rem;
+                margin-bottom: 24px;
+                text-align: center;
+                color: var(--ink);
+              "
+            >
+              What We Ask About
+            </h4>
+            <div
+              style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px"
+            >
+              <div
+                style="
+                  background: var(--parchment);
+                  border-radius: var(--radius);
+                  padding: 20px;
+                  display: flex;
+                  gap: 14px;
+                  align-items: flex-start;
+                  border: 1px solid var(--border);
+                "
+              >
+                <div
+                  style="
+                    width: 38px;
+                    height: 38px;
+                    background: rgba(123, 29, 29, 0.08);
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    color: var(--maroon);
+                  "
+                >
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div>
+                  <strong
+                    style="
+                      display: block;
+                      font-size: 0.88rem;
+                      margin-bottom: 4px;
+                    "
+                    >Overall Satisfaction</strong
+                  ><span style="font-size: 0.82rem; color: var(--ink-light)"
+                    >Rate your overall experience with PUP Maragondon Library
+                    services.</span
+                  >
+                </div>
+              </div>
+              <div
+                style="
+                  background: var(--parchment);
+                  border-radius: var(--radius);
+                  padding: 20px;
+                  display: flex;
+                  gap: 14px;
+                  align-items: flex-start;
+                  border: 1px solid var(--border);
+                "
+              >
+                <div
+                  style="
+                    width: 38px;
+                    height: 38px;
+                    background: rgba(123, 29, 29, 0.08);
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    color: var(--maroon);
+                  "
+                >
+                  <i class="fa-solid fa-book"></i>
+                </div>
+                <div>
+                  <strong
+                    style="
+                      display: block;
+                      font-size: 0.88rem;
+                      margin-bottom: 4px;
+                    "
+                    >Collection Quality</strong
+                  ><span style="font-size: 0.82rem; color: var(--ink-light)"
+                    >How satisfied are you with the range and relevance of
+                    available materials?</span
+                  >
+                </div>
+              </div>
+              <div
+                style="
+                  background: var(--parchment);
+                  border-radius: var(--radius);
+                  padding: 20px;
+                  display: flex;
+                  gap: 14px;
+                  align-items: flex-start;
+                  border: 1px solid var(--border);
+                "
+              >
+                <div
+                  style="
+                    width: 38px;
+                    height: 38px;
+                    background: rgba(123, 29, 29, 0.08);
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    color: var(--maroon);
+                  "
+                >
+                  <i class="fa-solid fa-people-group"></i>
+                </div>
+                <div>
+                  <strong
+                    style="
+                      display: block;
+                      font-size: 0.88rem;
+                      margin-bottom: 4px;
+                    "
+                    >Staff &amp; Service</strong
+                  ><span style="font-size: 0.82rem; color: var(--ink-light)"
+                    >Evaluate the helpfulness and professionalism of library
+                    personnel.</span
+                  >
+                </div>
+              </div>
+              <div
+                style="
+                  background: var(--parchment);
+                  border-radius: var(--radius);
+                  padding: 20px;
+                  display: flex;
+                  gap: 14px;
+                  align-items: flex-start;
+                  border: 1px solid var(--border);
+                "
+              >
+                <div
+                  style="
+                    width: 38px;
+                    height: 38px;
+                    background: rgba(123, 29, 29, 0.08);
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    color: var(--maroon);
+                  "
+                >
+                  <i class="fa-solid fa-laptop"></i>
+                </div>
+                <div>
+                  <strong
+                    style="
+                      display: block;
+                      font-size: 0.88rem;
+                      margin-bottom: 4px;
+                    "
+                    >Digital Resources</strong
+                  ><span style="font-size: 0.82rem; color: var(--ink-light)"
+                    >Feedback on the usability and availability of online
+                    databases.</span
+                  >
+                </div>
+              </div>
+              <div
+                style="
+                  background: var(--parchment);
+                  border-radius: var(--radius);
+                  padding: 20px;
+                  display: flex;
+                  gap: 14px;
+                  align-items: flex-start;
+                  border: 1px solid var(--border);
+                "
+              >
+                <div
+                  style="
+                    width: 38px;
+                    height: 38px;
+                    background: rgba(123, 29, 29, 0.08);
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    color: var(--maroon);
+                  "
+                >
+                  <i class="fa-solid fa-building"></i>
+                </div>
+                <div>
+                  <strong
+                    style="
+                      display: block;
+                      font-size: 0.88rem;
+                      margin-bottom: 4px;
+                    "
+                    >Facilities</strong
+                  ><span style="font-size: 0.82rem; color: var(--ink-light)"
+                    >Rate the library facilities, study spaces, and
+                    equipment.</span
+                  >
+                </div>
+              </div>
+              <div
+                style="
+                  background: var(--parchment);
+                  border-radius: var(--radius);
+                  padding: 20px;
+                  display: flex;
+                  gap: 14px;
+                  align-items: flex-start;
+                  border: 1px solid var(--border);
+                "
+              >
+                <div
+                  style="
+                    width: 38px;
+                    height: 38px;
+                    background: rgba(123, 29, 29, 0.08);
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    color: var(--maroon);
+                  "
+                >
+                  <i class="fa-solid fa-lightbulb"></i>
+                </div>
+                <div>
+                  <strong
+                    style="
+                      display: block;
+                      font-size: 0.88rem;
+                      margin-bottom: 4px;
+                    "
+                    >Suggestions</strong
+                  ><span style="font-size: 0.82rem; color: var(--ink-light)"
+                    >Share your ideas for how we can improve our services.</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col brand-col">
+            <div class="footer-logo">
+              <i class="fa-solid fa-book-open"></i>
+              <h3>PUP Maragondon Library</h3>
+            </div>
+            <p>
+              Your gateway to academic excellence. Providing reliable digital
+              resources, research archives, and multimedia for the Iskolar ng
+              Bayan since 1987.
+            </p>
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="YouTube"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li>
+                <a href="index.html"
+                  ><i class="fa-solid fa-angle-right"></i> Home</a
+                >
+              </li>
+              <li>
+                <a href="about.html"
+                  ><i class="fa-solid fa-angle-right"></i> About the Library</a
+                >
+              </li>
+              <li>
+                <a href="services.html"
+                  ><i class="fa-solid fa-angle-right"></i> Library Services</a
+                >
+              </li>
+              <li>
+                <a href="resources.html"
+                  ><i class="fa-solid fa-angle-right"></i> Online Resources</a
+                >
+              </li>
+              <li>
+                <a href="holdings.html"
+                  ><i class="fa-solid fa-angle-right"></i> Library Holdings</a
+                >
+              </li>
+              <li>
+                <a href="guidelines.html"
+                  ><i class="fa-solid fa-angle-right"></i> Guidelines</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Programs</h4>
+            <ul>
+              <li>
+                <a href="programs.html"
+                  ><i class="fa-solid fa-angle-right"></i> Library
+                  Orientation</a
+                >
+              </li>
+              <li>
+                <a href="programs.html"
+                  ><i class="fa-solid fa-angle-right"></i> Book Week
+                  Celebration</a
+                >
+              </li>
+              <li>
+                <a href="linkages.html"
+                  ><i class="fa-solid fa-angle-right"></i> Linkages</a
+                >
+              </li>
+              <li>
+                <a href="survey.html"
+                  ><i class="fa-solid fa-angle-right"></i> Library Survey</a
+                >
+              </li>
+              <li>
+                <a href="administration.html"
+                  ><i class="fa-solid fa-angle-right"></i> Administration</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact Us</h4>
+            <ul class="contact-list">
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Maragondon, Cavite, Philippines</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-clock"></i>
+                <span>Mon – Fri: 8:00 AM – 5:00 PM</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                <span>library.maragondon@pup.edu.ph</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i> <span>(046) 412 3312</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div
+          class="container"
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+          "
+        >
+          <p>
+            &copy; 2025 Polytechnic University of the Philippines – Maragondon.
+            All rights reserved.
+          </p>
+          <p>
+            <a href="survey.html">Library Survey</a> &nbsp;·&nbsp;
+            <a href="administration.html">Administration</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <button id="back-to-top" title="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>

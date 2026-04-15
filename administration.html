@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administration – PUP Maragondon Digital Library</title>
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Org chart connector lines */
+    .org-tree { text-align: center; }
+    .org-row { display: flex; justify-content: center; gap: 24px; position: relative; margin-top: 50px; }
+    .org-row::before {
+      content: ''; position: absolute;
+      top: -25px; left: 50%; width: 2px; height: 25px;
+      background: var(--border); transform: translateX(-50%);
+    }
+    .org-row:first-child::before { display: none; }
+    .org-row.multi::after {
+      content: ''; position: absolute;
+      top: -25px; left: 15%; right: 15%; height: 2px;
+      background: var(--border);
+    }
+    .org-node-wrap { display: flex; flex-direction: column; align-items: center; }
+    .org-node-wrap .connector {
+      width: 2px; height: 25px; background: var(--border);
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-transition" id="page-transition">
+  <div class="loader-icon"><i class="fa-solid fa-book-open"></i></div>
+  <p class="loader-text">Loading...</p>
+</div>
+
+<!-- MAIN HEADER -->
+<header id="main-header">
+  <div class="header-container">
+    <a href="index.html" class="logo no-transition">
+      <img src="assets/images/logo.png" alt="PUP Logo" class="logo-img">
+      <div class="logo-text-wrap">
+        <span>PUP Maragondon Library</span>
+        <span class="logo-sub">Polytechnic University of the Philippines</span>
+      </div>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" class="">Home</a></li>
+        <li><a href="about.html" class="">About</a></li>
+        <li class="has-dropdown">
+          <a href="services.html" class="">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="services.html#circulation"><i class="fa-solid fa-rotate"></i> Circulation</a></li>
+            <li><a href="services.html#reserve"><i class="fa-solid fa-bookmark"></i> Reserve</a></li>
+            <li><a href="services.html#reference"><i class="fa-solid fa-magnifying-glass"></i> Reference</a></li>
+            <li><a href="services.html#filipiniana"><i class="fa-solid fa-flag"></i> Filipiniana</a></li>
+            <li><a href="services.html#periodical"><i class="fa-solid fa-newspaper"></i> Periodical</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="resources.html" class="">Resources</a>
+          <ul class="dropdown-menu">
+            <li><a href="resources.html"><i class="fa-solid fa-database"></i> Online Resources</a></li>
+            <li><a href="holdings.html"><i class="fa-solid fa-books"></i> Library Holdings</a></li>
+          </ul>
+        </li>
+        <li><a href="guidelines.html" class="">Guidelines</a></li>
+        <li><a href="programs.html" class="">Programs</a></li>
+        <li class="has-dropdown">
+          <a href="#" class="active">More</a>
+          <ul class="dropdown-menu">
+            <li><a href="linkages.html"><i class="fa-solid fa-link"></i> Linkages</a></li>
+            <li><a href="survey.html"><i class="fa-solid fa-clipboard-list"></i> Library Survey</a></li>
+            <li><a href="administration.html"><i class="fa-solid fa-users"></i> Administration</a></li>
+          </ul>
+        </li>
+      </ul>
+      <button class="hamburger" aria-label="Open Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-drawer" id="mobile-drawer">
+  <button class="drawer-close" aria-label="Close Menu"><i class="fa-solid fa-xmark"></i></button>
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,0.07);">
+    <img src="assets/images/logo.png" alt="PUP Logo" style="height:34px;width:auto;">
+    <div>
+      <div style="color:#fff;font-family:'Playfair Display',serif;font-size:0.92rem;font-weight:600;line-height:1.2;">PUP Maragondon</div>
+      <div style="color:rgba(255,255,255,0.42);font-size:0.62rem;letter-spacing:1px;text-transform:uppercase;">Digital Library</div>
+    </div>
+  </div>
+  <nav class="drawer-nav">
+    <a href="index.html" class=""><span>Home</span></a>
+    <a href="about.html" class=""><span>About</span></a>
+    <a href="services.html" class=""><span>Services</span></a>
+    <a href="resources.html" class=""><span>Online Resources</span></a>
+    <a href="holdings.html" class=""><span>Library Holdings</span></a>
+    <a href="guidelines.html" class=""><span>Guidelines</span></a>
+    <a href="programs.html" class=""><span>Programs &amp; Events</span></a>
+    <a href="linkages.html" class=""><span>Linkages</span></a>
+    <a href="survey.html" class=""><span>Library Survey</span></a>
+    <a href="administration.html" class="active"><span>Administration</span></a>
+  </nav>
+</div>
+<div class="drawer-overlay" id="drawer-overlay"></div>
+
+
+<section class="inner-hero">
+  <div class="hero-overlay"></div>
+  <div class="container inner-hero-content">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <span>Administration</span>
+    </div>
+    <h1>Administration</h1>
+    <p>Meet the people behind the PUP Maragondon Library and learn about our organizational structure.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     ORGANIZATIONAL CHART
+════════════════════════════════════════════════ -->
+<section class="org-chart" style="background:var(--parchment);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Structure</span>
+      <h2 class="section-title">Organizational <span>Chart</span></h2>
+      <div class="section-divider"></div>
+      <!-- CONTENT UPDATED FROM PDF PAGE 11, 12 -->
+      <p class="section-sub" style="margin:16px auto 0;">The Office of the University Library Director oversees the total operations and administration of the PUP Libraries. Directly under the Office are four main divisions: Users Services, Technical Services, Library Information Technology Services, and Library Network Services.</p>
+    </div>
+
+    <div class="org-chart-wrap reveal">
+      <div class="org-tree">
+        <!-- Level 1: University Director -->
+        <div class="org-row">
+          <div class="org-node-wrap">
+            <div class="org-node head" style="min-width:220px;">
+              <div class="node-name">University Library Director</div>
+              <div class="node-title">Director</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Level 2: The Four Divisions -->
+        <div class="org-row multi" style="gap:16px;">
+          
+          <div class="org-node-wrap">
+            <div class="connector"></div>
+            <div class="org-node" style="min-width:140px;">
+              <div class="node-name">Users Services<br>Chief</div>
+              <div class="node-title">Division Chief</div>
+            </div>
+          </div>
+          <div class="org-node-wrap">
+            <div class="connector"></div>
+            <div class="org-node" style="min-width:140px;">
+              <div class="node-name">Technical Services<br>Chief</div>
+              <div class="node-title">Division Chief</div>
+            </div>
+          </div>
+          <div class="org-node-wrap">
+            <div class="connector"></div>
+            <div class="org-node" style="min-width:140px;">
+              <div class="node-name">Library Info Tech<br>Services Chief</div>
+              <div class="node-title">Division Chief</div>
+            </div>
+          </div>
+          <div class="org-node-wrap">
+            <div class="connector"></div>
+            <div class="org-node" style="min-width:140px;">
+              <div class="node-name">Library Network<br>Services Chief</div>
+              <div class="node-title">Division Chief</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Level 3: Section/Unit Examples -->
+        <div class="org-row" style="gap:16px;">
+          
+          <div class="org-node-wrap">
+            <div class="connector"></div>
+            <div class="org-node" style="min-width:130px;">
+              <div class="node-name">Circulation<br>Section</div>
+              <div class="node-title">Users Services</div>
+            </div>
+          </div>
+          <div class="org-node-wrap">
+            <div class="connector"></div>
+            <div class="org-node" style="min-width:130px;">
+              <div class="node-name">Filipiniana<br>Section</div>
+              <div class="node-title">Users Services</div>
+            </div>
+          </div>
+          <div class="org-node-wrap">
+            <div class="connector"></div>
+            <div class="org-node" style="min-width:130px;">
+              <div class="node-name">Collection Dev</div>
+              <div class="node-title">Technical Services</div>
+            </div>
+          </div>
+          <div class="org-node-wrap">
+            <div class="connector"></div>
+            <div class="org-node" style="min-width:130px;">
+              <div class="node-name">Cataloguing</div>
+              <div class="node-title">Technical Services</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     LIBRARY PERSONNEL
+════════════════════════════════════════════════ -->
+<section style="background:var(--parchment);padding:20px 0 100px;">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Meet the Team</span>
+      <h2 class="section-title">Library <span>Personnel</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-sub" style="margin:16px auto 0;">The dedicated professionals who make the PUP Maragondon Library a center of academic excellence.</p>
+    </div>
+
+    <div class="personnel-grid reveal">
+      
+      <div class="personnel-card">
+        <div class="photo-placeholder"><i class="fa-solid fa-user"></i></div>
+        <h3 class="personnel-name">[Name]</h3>
+        <span class="personnel-role">University Librarian</span>
+        <div class="personnel-contact">
+          <span><i class="fa-solid fa-envelope"></i>library@pup.edu.ph</span>
+          <span><i class="fa-solid fa-phone"></i>[Ext.]</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact CTA -->
+    <div style="background:var(--white);border-radius:var(--radius-lg);padding:50px 40px;margin-top:60px;text-align:center;border:1px solid var(--border);" class="reveal">
+      <h3 style="font-size:1.8rem;margin-bottom:12px;">Get in Touch</h3>
+      <!-- CONTENT UPDATED FROM PDF PAGE 63 -->
+      <p style="color:var(--ink-light);font-size:0.93rem;line-height:1.8;max-width:500px;margin:0 auto 28px;">For inquiries regarding services, collections, or research assistance, please contact us via email or our official social media channels.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="mailto:library@pup.edu.ph" class="btn-primary">
+          <span>Email the Library</span> <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="survey.html" class="btn-outline">Take Library Survey</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col brand-col">
+        <div class="footer-logo">
+          <i class="fa-solid fa-book-open"></i>
+          <h3>PUP Maragondon Library</h3>
+        </div>
+        <p>Your gateway to academic excellence. Providing reliable digital resources, research archives, and multimedia for the Iskolar ng Bayan since 1987.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About the Library</a></li>
+          <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Library Services</a></li>
+          <li><a href="resources.html"><i class="fa-solid fa-angle-right"></i> Online Resources</a></li>
+          <li><a href="holdings.html"><i class="fa-solid fa-angle-right"></i> Library Holdings</a></li>
+          <li><a href="guidelines.html"><i class="fa-solid fa-angle-right"></i> Guidelines</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="programs.html"><i class="fa-solid fa-angle-right"></i> Library Orientation</a></li>
+          <li><a href="programs.html"><i class="fa-solid fa-angle-right"></i> Book Week Celebration</a></li>
+          <li><a href="linkages.html"><i class="fa-solid fa-angle-right"></i> Linkages</a></li>
+          <li><a href="survey.html"><i class="fa-solid fa-angle-right"></i> Library Survey</a></li>
+          <li><a href="administration.html"><i class="fa-solid fa-angle-right"></i> Administration</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> <span>Maragondon, Cavite, Philippines</span></li>
+          <li><i class="fa-solid fa-clock"></i> <span>Mon – Fri: 8:00 AM – 5:00 PM</span></li>
+          <li><i class="fa-solid fa-envelope"></i> <span>library.maragondon@pup.edu.ph</span></li>
+          <li><i class="fa-solid fa-phone"></i> <span>(046) 412 3312</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+      <p>&copy; 2025 Polytechnic University of the Philippines – Maragondon. All rights reserved.</p>
+      <p><a href="survey.html">Library Survey</a> &nbsp;·&nbsp; <a href="administration.html">Administration</a></p>
+    </div>
+  </div>
+</footer>
+<button id="back-to-top" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="script.js"></script>
+</body>
+</html>
